@@ -3797,10 +3797,10 @@
 		)
 		(uuid "92bb3d56-428a-4390-acdb-b531e7462d83")
 	)
-	(text_box "Pulls down CML to LVDS levels."
+	(text_box "M-LVDS TRX is a terrible choice for CML, but it works, and we sourced a lot of them from LMPT board."
 		(exclude_from_sim no)
-		(at 214.122 146.05 0)
-		(size -18.034 5.334)
+		(at 193.04 118.618 0)
+		(size 29.21 12.192)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -3813,7 +3813,7 @@
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right top)
+			(justify left top)
 		)
 		(uuid "a85bd0f4-2e5f-4e39-ae94-144ee16dc8d3")
 	)
@@ -3840,12 +3840,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "49343e1a-4e08-4af0-8a77-b4263fc3bb5c")
-	)
-	(junction
-		(at 222.25 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "611ce57c-cc3b-444e-bbfa-177d015ebb0a")
 	)
 	(junction
 		(at 266.7 43.18)
@@ -4167,7 +4161,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 142.24) (xy 213.36 142.24)
+			(xy 213.36 142.24) (xy 231.14 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4194,26 +4188,6 @@
 			(type default)
 		)
 		(uuid "5fedaab0-c8f4-405f-9958-64ef5301e77e")
-	)
-	(wire
-		(pts
-			(xy 87.63 166.37) (xy 86.36 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6091ceb7-6771-45f9-a3c4-3d91a5e6a40e")
-	)
-	(wire
-		(pts
-			(xy 222.25 153.67) (xy 222.25 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6276a5f1-a473-457d-898a-982e9818a3bc")
 	)
 	(wire
 		(pts
@@ -4377,16 +4351,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 142.24) (xy 222.25 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aaa75485-4793-49fa-98b3-a83f71392a71")
-	)
-	(wire
-		(pts
 			(xy 43.18 31.75) (xy 48.26 31.75)
 		)
 		(stroke
@@ -4504,16 +4468,6 @@
 			(type default)
 		)
 		(uuid "efcd2d9e-937f-4dd1-a0b7-1d8f4e8d6187")
-	)
-	(wire
-		(pts
-			(xy 222.25 142.24) (xy 222.25 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4cf4a4f-3654-4185-b0b9-ea682b91b1bf")
 	)
 	(wire
 		(pts
@@ -5409,72 +5363,6 @@
 			(project "sfp-distribution-amplifier"
 				(path "/ab69ccf1-24ef-4c4a-a942-864f7bea3fa8"
 					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 86.36 166.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3876a00e-32f8-48a1-8c5e-d72f30971f34")
-		(property "Reference" "#PWR031"
-			(at 86.36 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 86.36 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 86.36 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6c410210-6451-4b6c-8349-4b61e14f9d17")
-		)
-		(instances
-			(project "sfp-distribution-amplifier"
-				(path "/ab69ccf1-24ef-4c4a-a942-864f7bea3fa8"
-					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -6604,73 +6492,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 222.25 153.67 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7927861b-e656-4e5f-aa1c-a735eade10ac")
-		(property "Reference" "#PWR09"
-			(at 222.25 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 222.25 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 222.25 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5946823b-ada1-4b4c-9722-a60344ab7e7b")
-		)
-		(instances
-			(project ""
-				(path "/ab69ccf1-24ef-4c4a-a942-864f7bea3fa8"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 115.57 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7077,77 +6898,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 222.25 148.59 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9714b74d-13c3-4864-80b3-92c3fffc3632")
-		(property "Reference" "R4"
-			(at 219.71 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100K"
-			(at 219.71 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 224.028 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 222.25 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 222.25 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "592693ac-99db-46b5-94ce-da21a932711d")
-		)
-		(pin "1"
-			(uuid "dff7c5d9-9a4c-46a8-998e-2d770a3c6d4a")
-		)
-		(instances
-			(project ""
-				(path "/ab69ccf1-24ef-4c4a-a942-864f7bea3fa8"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 115.57 31.75 0)
 		(unit 1)
@@ -7208,73 +6958,6 @@
 			(project ""
 				(path "/ab69ccf1-24ef-4c4a-a942-864f7bea3fa8"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 87.63 166.37 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a4e84b73-5325-4773-9acf-b807f0c0df33")
-		(property "Reference" "TP2"
-			(at 92.71 165.1 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 92.71 167.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
-			(at 87.63 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 87.63 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 87.63 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9d984339-c7e5-4032-907d-088742b3b638")
-		)
-		(instances
-			(project ""
-				(path "/ab69ccf1-24ef-4c4a-a942-864f7bea3fa8"
-					(reference "TP2")
 					(unit 1)
 				)
 			)
