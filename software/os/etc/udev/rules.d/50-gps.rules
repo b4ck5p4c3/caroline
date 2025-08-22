@@ -1,0 +1,6 @@
+# Low latency for OnCore UART
+KERNEL=="ttyAMA0", RUN+="/bin/setserial /dev/ttyAMA0 low_latency"
+
+# Symlink for ntpd OnCore driver
+KERNEL=="ttyAMA0", SYMLINK+="oncore.serial.0"
+KERNEL=="pps0",OWNER="root",GROUP="tty",MODE="0777",SYMLINK+="oncore.pps.0"

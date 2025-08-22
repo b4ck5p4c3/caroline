@@ -30,9 +30,6 @@ fp-info-cache
 *.xml
 *.csv
 
-# Prerequisites
-*.d
-
 # Compiled Object files
 *.slo
 *.lo

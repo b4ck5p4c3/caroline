@@ -1,0 +1,50 @@
+# Disable audio
+dtparam=audio=off
+
+# Minimal GPU RAM dedication
+gpu_mem=16mb
+
+# Fixed boost frequency
+arm_boost=1
+force_turbo=1
+
+# Disable WiFi
+dtoverlay=disable-wifi
+
+# Automatically load initramfs files, if found
+auto_initramfs=1
+
+# Run in 64-bit mode
+arm_64bit=1
+
+# I2C
+dtparam=i2c_arm=on
+
+# RTC
+dtoverlay=i2c-rtc,ds3231
+
+# PPS
+dtoverlay=pps-gpio,gpiopin=18
+
+# Enable watchdog
+dtparam=watchdog=on
+
+# Skipping boot delay and rainbow splashscreen
+boot_delay=0
+disable_splash=1
+
+# Enable UART
+enable_uart=1
+
+[all]
+# Uses the /dev/ttyAMA0 UART GNSS instead of Bluetooth
+dtoverlay=miniuart-bt
+
+# Disables Bluetooth for better accuracy and lower interferance - optional
+dtoverlay=disable-bt
+
+# Disables Wifi for better accuracy and lower interferance - optional
+dtoverlay=disable-wifi
+
+# Disables kernel power saving
+nohz=off

@@ -1,0 +1,29 @@
+# Enable (1) NO RESET, Read Position, delays from data file, lock it in, go to OD mode.
+MODE 1
+
+# Latitude: 59° 59' 37" N
+LAT 59 59 37
+
+# Longitude: 30° 18' 33" E
+LON 30 18 32
+
+# Height: 7 meters (converted to feet: ~22.97 ft)
+HTMSL 7 M
+
+# Cable delay (~8 meters)
+DELAY 40 NS
+
+# Enable SHMEM stats output
+STATUS /tmp/ONCORE.0
+
+# Enable T-RAIM integrity check algorithm
+TRAIM YES
+
+# Allow PPS signal to be produced only when TRAIM is OK
+PPSCONTROL TRAIM
+
+# Output 3D position in STATUS
+POSN3D
+
+# Allow sats with Elevation >= 10
+MASK 10
