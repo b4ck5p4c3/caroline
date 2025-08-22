@@ -7,7 +7,7 @@ Stratum 1 NTP server and clock reference based on surplus Huawei LMPT board.
 ## License
 
 - [MIT X11 License](./LICENSE) for software, configuration files, and documentation.
-- [CERN-OHL-W](./hardware/LICENSE) for hardware design files.
+- [CERN-OHL-S](./hardware/LICENSE) for hardware design files.
 
 ## Acknowledgments
 
