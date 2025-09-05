@@ -8,7 +8,7 @@ import { MetricsFrame } from './lib/prometheus/frame'
 
 const FRAME_TTL_MS = 10_000 // 10 seconds
 
-const oncore = new OncoreStreamingParser('example.bin')
+const oncore = new OncoreStreamingParser(process.argv[2] ?? '/dev/oncore.serial.0')
 const metrics = new MetricsExporter({
   globalLabels: {
     host: hostname(),
