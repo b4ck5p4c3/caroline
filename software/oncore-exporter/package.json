@@ -1,0 +1,37 @@
+{
+  "name": "@bksp/caroline-oncore-exporter",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "keywords": [
+    "oncore",
+    "motorola oncore",
+    "exporter",
+    "gps"
+  ],
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "lint": "tsc --noEmit && eslint ."
+  },
+  "author": "B4CKSP4CE Team & Contributors <info@0x08.in>",
+  "license": "MPL-2.0",
+  "description": "Exporter for Motorola Oncore GPS receivers binary telemetry",
+  "devDependencies": {
+    "@bksp/style-guide": "^0.18.0",
+    "@types/node": "^22.12.0",
+    "eslint": "^9.34.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0"
+  },
+  "dependencies": {
+    "mitt": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
