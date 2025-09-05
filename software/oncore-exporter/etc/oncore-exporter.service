@@ -1,0 +1,40 @@
+[Unit]
+Description=Metrics exporter for the Motorola Oncore GPS receiver
+Documentation=https://github.com/b4ck5p4c3/caroline
+After=ntpd.service
+
+[Service]
+ProtectSystem=strict
+PrivateTmp=true
+ProtectKernelLogs=true
+ProtectProc=invisible
+PrivateUsers=true
+ProtectHome=true
+
+NoNewPrivileges=true
+ProtectKernelModules=true
+SystemCallArchitectures=native
+ProtectHostname=true
+RestrictAddressFamilies=AF_INET AF_INET6
+ProtectControlGroups=true
+ProtectKernelTunables=true
+RestrictSUIDSGID=true
+ProtectClock=true
+RemoveIPC=true
+
+## Capabilities and syscalls
+CapabilityBoundingSet=
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources
+
+# Runtime configuration
+Environment=PORT=9101
+Type=simple
+User=ntp
+WorkingDirectory=/opt/caroline/software/oncore-exporter
+ExecStart=/usr/bin/node --import=tsx src/index.ts
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
