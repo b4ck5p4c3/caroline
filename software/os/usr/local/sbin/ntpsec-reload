@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Read PID from run file
+NTPSEC_PID=$(cat /run/ntpd.pid 2>/dev/null)
+
+if [ -n "$NTPSEC_PID" ] && kill -0 "$NTPSEC_PID" 2>/dev/null; then
+    # Send SIGHUP to reload certs and keys
+    kill -HUP "$NTPSEC_PID"
+    exit 0
+else
+    echo "NTPsec is not running on PID $NTPSEC_PID" >&2
+    exit 1
+fi
